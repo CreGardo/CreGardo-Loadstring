@@ -1,0 +1,22 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local GunkitRemotes = game:GetService("ReplicatedStorage"):FindFirstChild("Acs_Engine") and game:GetService("ReplicatedStorage"):FindFirstChild("Acs_Engine").Remotes or game:GetService("ReplicatedStorage"):FindFirstChild("Carbon") and game:GetService("ReplicatedStorage"):FindFirstChild("Carbon").Remotes or game:GetService("ReplicatedStorage"):FindFirstChild("GunRemotes")
+
+local gr = nil
+for index, value in pairs(GunkitRemotes:GetChildren()) do
+    if value.Name:lower() == "bullet" then
+        gr = value
+        break
+    end
+end
+
+if gr then
+    for index, player in pairs(Players:GetPlayers()) do
+        if player != LocalPlayer then
+            gr:FireServer{
+                "Auth", nil, game.CreatorId, player, math.huge
+            }
+        end
+    end
+end
