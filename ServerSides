@@ -48,7 +48,7 @@ Remotes.Name = "Remotes"
 Remotes.Parent = Frame
 
 
-local function ENBTJX_fake_script() -- TextButton.Client 
+local function ENBTJX_fake_script() 
 	local script = Instance.new('LocalScript', TextButton)
 
 	local remotes = script.Parent.Parent.Remotes
@@ -60,12 +60,7 @@ local function ENBTJX_fake_script() -- TextButton.Client
 end
 coroutine.wrap(ENBTJX_fake_script)()
 local function OGCAA_fake_script() -- Frame.DragScript 
-	local script = Instance.new('LocalScript', Frame)
-
-	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
-	--Put this inside of your Frame and configure the speed if you would like.
-	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
-	
+	local script = Instance.new('LocalScript', Frame	
 	local UIS = game:GetService('UserInputService')
 	local frame = script.Parent
 	local dragToggle = nil
