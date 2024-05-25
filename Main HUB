@@ -1,3 +1,4 @@
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
@@ -166,37 +167,6 @@ local Window = Rayfield:CreateWindow({
         loadstring(game:HttpGet('https://raw.githubusercontent.com/userbo/Bakddangdon1/main/script'))()
     end,
  })
-
- local Button = GameTab:CreateButton({
-   Name = "아스널 ESP",
-   Callback = function()
-      local localplr = game.Players.LocalPlayer
-
-      local function createchams(part, v)
-          if v.Name ~= localplr.Name and not part:FindFirstChild("box") then
-              local BoxHandleAdornment = Instance.new("BoxHandleAdornment")
-              BoxHandleAdornment.Name = "box"
-              BoxHandleAdornment.Parent = part
-              BoxHandleAdornment.Adornee = part
-              BoxHandleAdornment.AlwaysOnTop = true
-              BoxHandleAdornment.ZIndex = 10
-              BoxHandleAdornment.Size = part.Size
-              BoxHandleAdornment.Color3 = Color3.fromRGB(0, 255, 0)
-              BoxHandleAdornment.Transparency = 0.5
-          end
-      end
-      
-      while true do
-          task.wait(0.5)
-          for i, v in pairs(workspace:GetChildren()) do
-              if v:IsA("Model") and v:FindFirstChild("Hitbox") then
-                  local part = v.Hitbox
-                  createchams(part, v)
-              end
-          end
-      end
-   end,
-})
 
 local Button = PlayerTab:CreateButton({
    Name = "Fly",
