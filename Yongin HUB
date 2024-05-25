@@ -28,8 +28,8 @@ local Window = Rayfield:CreateWindow({
  })
 
  Rayfield:Notify({
-    Title = "권력겜 ㅈ까 논산이나 해ㅉ",
-    Content = "권력겜 ㅈ까",
+    Title = "잼민겜 ㅈ까",
+    Content = "잼민겜 애미뒤진 장애 허브 구독!",
     Duration = 5,
     Image = 13047715178,
     Actions = { -- Notification Buttons
@@ -95,6 +95,18 @@ local Window = Rayfield:CreateWindow({
     Flag = "sliderjp", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
     Callback = function(Value)
          game.Players.LocalPlayer.Character.Humanoid.JumpPower = (Value)
+    end,
+ })
+
+ local Slider = PlayerTab:CreateSlider({
+    Name = "Health",
+    Range = {1, 99999999999},
+    Increment = 1,
+    Suffix = "Health",
+    CurrentValue = 16,
+    Flag = "sliderjp", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+         game.Players.LocalPlayer.Character.Humanoid.Health = (Value)
     end,
  })
 
