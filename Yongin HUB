@@ -67,7 +67,7 @@ local Window = Rayfield:CreateWindow({
             _G.infinJumpStarted = true
             
             --Notifies readiness
-            game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Infinite Jump Activated!"; Duration=5;})
+            game.StarterGui:SetCore("SendNotification", {Title="UE Hub"; Text="Infinite Jump Activated!"; Duration=5;})
         
             --The actual infinite jump
             local plr = game:GetService('Players').LocalPlayer
